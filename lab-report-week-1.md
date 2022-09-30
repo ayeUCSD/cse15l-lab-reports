@@ -100,3 +100,17 @@ storing the ***PUBLIC*** key to the `/.ssh` directory on the ssh will allow you 
 
 This is where I struggled the most. (I believe this may be due to me being on the TA6 account and not my own, or I suck. Probably the latter)
 
+------
+
+## Optimizing Remote Running
+
+An easy way to optimize is to have all of your commands written and executed on a single line.   
+Here is an example of a command that will connect to the ssh, and then compile and run WhereAmI.
+
+    ssh cs15lfa22ej@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"
+
+Here is another example of a command that will compile the WhereAmI file locally, port it to the ssh.
+
+    javac WhereAmI.java; scp WhereAmI.java cs15lfa22ej@ieng6.ucsd.edu:~/ 
+    
+**Because I cannot log in to my ssh, and was instructed not to use the TA6 account, I cannot show a screenshot of this working. **
