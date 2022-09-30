@@ -15,7 +15,7 @@ What we went over:
 - some command line... commands
 - moving files with command scp
 - ssh keys
-
+- Optimizing Remote Commands
 
 ------
 
