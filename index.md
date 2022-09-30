@@ -1,7 +1,5 @@
-this is the text i shall put in this file!
-thats all.
-# fontsize change!
-**this is rendered in text form in the preview** crazy huh?
+#CSE 15L Lab Reports FA22
+##Adrian Ye 
 
-
-Here is a link to the lab report page ==> [link](./lab-report-1-week-0.md)
+------
+### [Week 1](./lab-report-week-1.md)
