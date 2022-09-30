@@ -15,6 +15,8 @@ What we went over:
 - some command line... commands
 - moving files with command scp
 - ssh keys
+
+
 ------
 
 
@@ -113,4 +115,4 @@ Here is another example of a command that will compile the WhereAmI file locally
 
     javac WhereAmI.java; scp WhereAmI.java cs15lfa22ej@ieng6.ucsd.edu:~/ 
     
-**Because I cannot log in to my ssh, and was instructed not to use the TA6 account, I cannot show a screenshot of this working. **
+**Because I cannot log in to my ssh, and was instructed not to use the TA6 account, I cannot show a screenshot of this working**
