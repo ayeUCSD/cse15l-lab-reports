@@ -9,11 +9,11 @@ Luckilly, one of the tutors let me use their login so I could at least try some 
 
 
 What we went over:
-- our cse15l Account!
-- vs code
-- connecting to an ssh 
-- some command line... commands
-- moving files with command scp
+- Our cse15l Account!
+- VS code
+- Connecting to an ssh 
+- Some command line... commands
+- Moving files with command scp
 - ssh keys
 - Optimizing Remote Commands
 
