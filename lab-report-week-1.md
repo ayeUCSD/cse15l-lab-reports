@@ -86,7 +86,7 @@ Broken down there are 3 steps:
 
     after the "~/" you can put the directory path you want to scp to.
 
-3. Log in, and then you're done! (unless you have a ssh key, then done on step 2)
+3. Log in, and then you're done! (unless you have a ssh key, then done on step 2)  
 **Because I cannot log in to my ssh, and was instructed not to use the TA6 account, I cannot show a screenshot of this working**
 -----
 ## ssh Keys
@@ -99,7 +99,7 @@ An ssh key has two components:
 
 storing the ***PUBLIC*** key to the `/.ssh` directory on the ssh will allow you to connect to the ssh without needing to manually enter the password
 
-This is where I struggled the most. (I believe this may be due to me being on the TA6 account and not my own, or I suck. Probably the latter)
+This is where I struggled the most. (I believe this may be due to me being on the TA6 account and not my own, or I suck. Probably the latter)  
 **Because I cannot log in to my ssh, and was instructed not to use the TA6 account, I cannot show a screenshot of this working**
 ------
 
