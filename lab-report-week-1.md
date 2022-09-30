@@ -73,3 +73,30 @@ I image of me accessing my partners directory via TA account (probably cannot do
 
 -----
 ## Moving files via scp
+We learned how to... move files via scp
+
+Broken down there are 3 steps:
+1. Navigae to file location on local device
+2. Input the scp command with your desired ssh  
+    like this:
+    
+    >scp cse15lfa22zz@ieng6.ucsd.edu:~/
+
+    after the "~/" you can put the directory path you want to scp to.
+
+3. Log in, and then you're done! (unless you have a ssh key, then done on step 2)
+
+
+-----
+## ssh Keys
+
+ssh keys allow you to log into an ssh automatically without needing to enter your password every single time you want to connect.  
+
+An ssh key has two components: 
+- the private key   (id_rsa) 
+- the public key    (id_rsa.pub)
+
+storing the ***PUBLIC*** key to the `/.ssh` directory on the ssh will allow you to connect to the ssh without needing to manually enter the password
+
+This is where I struggled the most. (I believe this may be due to me being on the TA6 account and not my own, or I suck. Probably the latter)
+
