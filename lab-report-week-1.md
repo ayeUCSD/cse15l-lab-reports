@@ -35,6 +35,15 @@ The process should be pretty simple, but I encountered a big problem. We had to 
 ## VS Code
 
 Next we downloaded VS code. I already had it installed and running, so other than reading over the step, I did nothing. 
+
+
+**If you wish to download VS Code, there are 3 simple steps!**
+
+1. go to the [download page](https://code.visualstudio.com/)
+2. download the installer for your device (mac, windows, linux)
+3. run the installer!
+
+
 > Me typing in VScode right now
 >> ![image](./w1images/vscode.png)
 
