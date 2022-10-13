@@ -112,7 +112,20 @@ Here is it running on my local files:
 
 Now, I want to scp it to my SSH. The command
 I will use will be
-> `scp WhereAmI.java cse15lfa22ej@ieng6.ucsd.edu:~/`
+> `scp WhereAmI.java cs15lfa22ej@ieng6.ucsd.edu:~/`
+
+Here it is in action:
+![image](w1images/scpWhereAmI.png)
+
+
+You can see that it was successfully copied over to the ssh after I logged in.
+
+Now after logging into the ssh, I can compile and run WhereAmI.java
+
+![image](w1images/logInAndRunWhereAmI.png)
+
+
+
 
 -----
 ## ssh Keys
@@ -125,8 +138,51 @@ An ssh key has two components:
 
 storing the ***PUBLIC*** key to the `/.ssh` directory on the ssh will allow you to connect to the ssh without needing to manually enter the password
 
-This is where I struggled the most. (I believe this may be due to me being on the TA6 account and not my own, or I suck. Probably the latter)  
-**Because I cannot log in to my ssh, and was instructed not to use the TA6 account, I cannot show a screenshot of this working**
+
+
+### Creating an ssh key
+
+First, we need to generate an ssh key!
+We can do this by running the `ssh-keygen` command on our local client (your computer)
+
+![image](w1images/generateKey.png)
+
+this creates your ssh keys in your `C:/user/.ssh/` folder
+(if you are on windows)
+
+Now, you need to make a new directory on the ssh to store your ssh key(s). In order to do this, you can use the command
+
+> mkdir .ssh
+
+while logged into the ssh to create a new directory called `.ssh`
+
+![image](w1images/mkdirNewSSH.png)
+
+
+Now for the last step. You need to scp your public key to your .ssh folder on the remote server.
+
+
+Make sure you locate the path for `id_rsa.pub` (its probably in your `user/.ssh` folder)
+
+Here is the command I used to send it:
+> scp /Users/adria/.ssh/id_rsa.pub cs15lfa22ej@ieng6.ucsd.edu:~/.ssh/authorized_keys
+
+after the "`:~/`" , I specified the folder it would go into, and where to save the key.
+
+![image](w1images/scpKey.png)
+
+
+
+Now, I should be able to log in just fine without needing to enter my password!
+
+![image](w1images/loginPt1.png)
+...same line repeated...
+![image](w1images/loginPt2.png)
+
+
+As you can see, I did not get a password prompt, and now am logged in!
+
+
 ------
 
 ## Optimizing Remote Running
