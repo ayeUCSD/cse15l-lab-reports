@@ -4,12 +4,19 @@
 
 
 Dear diary,
-This lab, I had an absolutely frustrating time logging in to the SSH. In fact, as of writing now, I STILL cannot log in.  
+This lab, I had an absolutely frustrating time logging in to the SSH. 
+
+~~In fact, as of writing now, I STILL cannot log in.~~
+
 Luckilly, one of the tutors let me use their login so I could at least try some of the lab.
 
+I went back and revised the whole lab after I fixed my login! Golly that took a lot of time!!
 
-What we went over:
-- Our cse15l Account!
+-----------------
+
+
+**What we went over:**
+- Our cse15l Account
 - VS code
 - Connecting to an ssh 
 - Some command line... commands
@@ -191,10 +198,18 @@ As you can see, I did not get a password prompt, and now am logged in!
 An easy way to optimize is to have all of your commands written and executed on a single line.   
 Here is an example of a command that will connect to the ssh, and then compile and run WhereAmI.
 
-    ssh cs15lfa22ej@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"
+   > ssh cs15lfa22ej@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"
+
+Result:
+![image](w1images/optimize1.png)
+
+
+
 
 Here is another example of a command that will compile the WhereAmI file locally, port it to the ssh.
 
-    javac WhereAmI.java; scp WhereAmI.java cs15lfa22ej@ieng6.ucsd.edu:~/ 
+   > javac WhereAmI.java; scp WhereAmI.java cs15lfa22ej@ieng6.ucsd.edu:~/ 
+
+Result:
+![image](w1images/optimize2.png)
     
-**Because I cannot log in to my ssh, and was instructed not to use the TA6 account, I cannot show a screenshot of this working**
