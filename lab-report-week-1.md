@@ -88,15 +88,28 @@ We learned how to... move files via scp
 
 Broken down there are 3 steps:
 1. Navigae to file location on local device
-2. Input the scp command with your desired ssh  
+2. Input the scp command with your desired file path for ### and the remote ssh  
     like this:
     
-    >scp cse15lfa22zz@ieng6.ucsd.edu:~/
+    >scp ##### cse15lfa22zz@ieng6.ucsd.edu:~/
 
+    
     after the "~/" you can put the directory path you want to scp to.
 
 3. Log in, and then you're done! (unless you have a ssh key, then done on step 2)  
 **Because I cannot log in to my ssh, and was instructed not to use the TA6 account, I cannot show a screenshot of this working**
+
+### DEMO:
+
+I have a file called `WhereAmI.java` whos only function is to print out the OS name, User, Root Directory, and Current Directory
+
+Here is it running on my local files:
+
+![image]("./w1images/localWhereAmI.png")
+w1images\localWhereAmI.png
+
+
+
 -----
 ## ssh Keys
 
