@@ -70,6 +70,7 @@ There are three parts to this line.
 ## Running Commands on ssh
 Here, we started to run some command line... commands.  
 Here are a few that we used
+
 | Command | Function |
 | ------- | -------- |
 | cd     | change directory |
