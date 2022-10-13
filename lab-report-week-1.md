@@ -105,10 +105,14 @@ I have a file called `WhereAmI.java` whos only function is to print out the OS n
 
 Here is it running on my local files:
 
-![image]("./w1images/localWhereAmI.png")
-w1images\localWhereAmI.png
+
+ ![image](w1images\localWhereAmI.png)
 
 
+
+Now, I want to scp it to my SSH. The command
+I will use will be
+> `scp WhereAmI.java cse15lfa22ej@ieng6.ucsd.edu:~/`
 
 -----
 ## ssh Keys
