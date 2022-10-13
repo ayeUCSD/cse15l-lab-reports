@@ -70,13 +70,13 @@ There are three parts to this line.
 ## Running Commands on ssh
 Here, we started to run some command line... commands.  
 Here are a few that we used
-|Command|Function|
-|-------|--------|
-|cd     |change directory|
-|ls     |lists files in current directory|
-|cp     |copy; can be used on files and directories (?)
-|cat    |prints contents of a file|
-|mkdir  |makes a new directory
+| Command | Function |
+| ------- | -------- |
+| cd     | change directory |
+| ls     | lists files in current directory |
+| cp     | copy; can be used on files and directories (?) |
+| cat    | prints contents of a file |
+| mkdir  | makes a new directory |
 
 I image of me accessing my partners directory via TA account (probably cannot do this on a regular student account)
  ![image](./w1images/sshcommands.png)
