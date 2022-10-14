@@ -65,4 +65,34 @@ class Handler implements URLHandler {
     }
 }
 ```
+Here it is in action:
 
+After launching, it looks like this after i go to the link:
+
+    http://localhost:4000/
+
+>![image](/r2images/SE1.png)
+> As you can see, there are no entries in the list
+
+I am going to add the word "silly" to the list by going to this link: 
+
+    http://localhost:4000/add?a=silly
+
+I can change what I want to add by inputting any string after the ``a=``
+
+
+Now if we go back to the localhost, we can see that it was added!
+
+>![image](/r2images/SE2.png)
+
+
+I am going to add another word called "sillybilly" which contains the word "silly"
+>![image](/r2images/SE3.png)
+
+
+Now by going to the following link, I am going to search for "silly"
+
+    http://localhost:4000/query?s=silly
+
+>![image](/r2images/SE4.png)
+>as you can see, it returned both silly and sillybilly as "search results"
