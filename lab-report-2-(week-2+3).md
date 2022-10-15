@@ -132,9 +132,9 @@ The instances I will show you today are the ListExample and LinkedListExample me
 
 
 
-### *ListExample*
+## *ListExample*
 
-These are the tests I wrote to test ListExample. There are two tests for filler() and one test for merge()
+These are the tests I wrote to test ListExample. There are two tests for filter() and one test for merge()
 
 ```
  @Test
@@ -169,13 +169,51 @@ These are the tests I wrote to test ListExample. There are two tests for filler(
   }
 ```
 
-> This is an image of ListExamples failing Filler() tests, specifically
+### **Filter() Tests**
+> This is an image of ListExamples failing Filter() tests, specifically testFilter2()
 >![image](/r2images/LEbug.png)
 
-The input that produced an error was passing an array with strings that were all different.
+|**FAILURE INPUT:**| **SYMPTOM + BUG** | **FIX** |
+|----------|---------|------------|
+|The input that produced an error was passing an array with strings with entries that passed being different from each other. eg: - `["aa","b","cc","ddd","ee"] ` would fail but `["aa","b","aa","ccc","aa"]` would pass| The array would insert items at index 0 instead of the end, thus reversing the entries of the array, making the output defective. eg: input `["aa","b","cc","ddd","ee"] ` would output ``["ee", "cc", "aa" ]`` which is not in the correct order|The fix I provided was to remove the 0 from the arguments at the add() method ![image](/r2images/LEfix.png)|
+
+
+### **Merge() Tests**
+
+>Image of Merge() failing the test
+> ![image](/r2images/LEMergeFail.png)
 
 
 
- eg.:
-- `["aa","b","cc","ddd","ee"] ` would fail
-- `["aa","b","aa","ccc","aa"]` would pass
+
+|**FAILURE INPUT:**| **SYMPTOM + BUG** | **FIX** |
+|----------|---------|------------|
+|Any input will cause the symptom to appear! The one used in the test was two lists, one with contents `["a","b","c","d","e"]` and one with contents `["aa","bb","cc","dd","ee"]`|Symptom: Stuck in an infinite loop! The bug was that one of the counters used in the code was not being incremented properly! ![image](/r2images/LEMergebug.png) (index1 is being incremented when index2 should be) This means that it will never reach the break condition, thus creating an infinite loop! |This was a simple fix. Instead of incrementing index1, you increment index2 ![image](/r2images/LEMergeFix.png)|
+
+
+
+-------
+
+## *LinkedListExample*
+
+These are the tests I wrote to test LinkedListExample. There was one test for testAppend()
+
+```
+ @Test
+  public void testAppend(){
+    LinkedList l = new LinkedList();
+    l.append(1);
+    l.append(0);
+    l.append(-1);
+    assertEquals("1 0 -1 ", l.toString());
+
+  }
+```
+
+### **Append() Tests**
+> This is an image of ListExamples failing Append() test
+>![image](/r2images//LLEfailure.png)
+
+|**FAILURE INPUT:**| **SYMPTOM + BUG** | **FIX** |
+|----------|---------|------------|
+|Any input would have failed this test! The inputs used in the test were `1, 0, -1`|The Symptom was another infinite loop! The bug was that the list was continuously creating a new node every time it traversed to the next node, thus never reaching the break condition of `n.next == null` ![image](/r2images/LLEbug.png)|The fix is very easy! all you had to do was create the new node outside of your while loop, thus squashing the pesky bug! ![image](/r2images/LLEfix.png)|
