@@ -20,7 +20,9 @@ Because you guys asked,  here is the single large class that my search engine is
 *Main Body*
 
 ```
-public String handleRequest(URI url) {
+ArrayList<String> list = new ArrayList<String>();
+
+    public String handleRequest(URI url) {
         // checks if path is "empty"
         if (url.getPath().equals("/")) {
             return String.format("Here is whats in the List!:\n" + String.join(", ", list));
@@ -37,49 +39,54 @@ public String handleRequest(URI url) {
 
             else if (url.getPath().contains("/query")) {
                 // Code for Searching
-                    return search(parameters);
-                }
+                return search(parameters);
             }
-
-            return "bruh wtf error code 404 up in here\n you fucked up lol";
         }
+
+        return "bruh wtf error code 404 up in here\n you fucked up lol";
     }
 ```
 
 **add function**
 ```
-public String add(String[] parameters){
-    // if we in fact are adding.... check for the "a"
-    if (parameters[0].equals("a")) {
-        list.add(parameters[1]);
-        return String.format("Added " + parameters[1] + " to the List!");
+public String add(String[] parameters) {
+        // if we in fact are adding.... check for the "a"
+            list.add(parameters[1]);
+            return String.format("Added " + parameters[1] + " to the List!");
     }
-}
 ```
 **search function**
 ```
-public String search(String[] parameters){
-    // if we in fact are searching.... check for the "s"
-    if (parameters[0].equals("s")) {
+public String search(String[] parameters) {
+        // if we in fact are searching.... check for the "s"
         ArrayList<String> tempList = new ArrayList<String>();
-        Iterator iter = list.iterator();
-        while (iter.hasNext()) {
-            String temp = (String) iter.next();
-            if (temp.contains(parameters[1])) {
-                tempList.add(temp);
+        if (parameters[0].equals("s")) {
+            Iterator iter = list.iterator();
+            while (iter.hasNext()) {
+                String temp = (String) iter.next();
+                if (temp.contains(parameters[1])) {
+                    tempList.add(temp);
+                }
             }
         }
-
         return String.format("Result(s): " + String.join(", ", tempList));
+    }
 }
 
 ```
+To launch the server, I run the following commands:
+
+    javac SearchEngine.java Server.java
+    java SearchEngine 4000
+
+
+The 4000 on the second command represents the port the server will launch on. As long as the port is not already being used, you should be able to launch and connect from any port you have.
 
 Here it is in action:
 
 For all pages/screenshots below, the handleRequest method is called which will itself call more methods.
 
-After launching, it looks like this after i go to the link:
+After launching, it looks like this after I go to the link:
 
     http://localhost:4000/
 
@@ -101,7 +108,13 @@ Now if we go back to the localhost, we can see that it was added!
 >
 >In the add() method, the path array was passed into it, and it adds the string after the "=" to the list of words stored.
 
-I am going to add another word called "sillybilly" which contains the word "silly". You can see that the search engine has those two entries stored here:
+I am going to add another word called "sillybilly" which contains the word "silly". 
+
+>![image](/r2images/sillybilly.png)
+
+
+
+You can see that the search engine has those two entries stored here:
 >![image](/r2images/SE3.png)
 
 
