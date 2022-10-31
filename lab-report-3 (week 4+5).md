@@ -58,6 +58,8 @@ Pretty simple right? As long as you put the string you want to find after the '/
 I will now search for "Older" in the file and we can look at the results of the first page!
 
     /Older
+
+
 |Before|After|
 |------|-----|
 |![image](/r3images/beforeCommand.png)|![image](/r3images/afterCommand.png)|
@@ -66,6 +68,52 @@ You can see on the before column, I have the command queued up in the bottom lef
 
 I won't be showing the queued up commands from now on, but I will show the commands I entered.
 
+**How to navigate through entries?**
+
+To navigate to the next or previous string that matches, type 'n' or shift + 'n' (aka 'N') respectively
+
+NOTE: It displays the next line that contains the string at the very top
+
+|`n`|`N`|
+|------|-----|
+|Before Press: <br>![image](/r3images/searchOlder.png)<br>After Press:<br> ![image](/r3images/searchOlderSmallN.png) | Before Press: <br>![image](/r3images/beforeBigN.png)<br>After Press:<br> ![image](/r3images/AfterBigN.png) |
+
+Handy because this is *THE* way to navigate through searches!
+
+**IMPORTANT NOTE:**
+The search feature in less is by default case sensitive. 
+
+You can see that although there is another "older" string at the beginning of the second paragraph (and more sprinkled everywhere between)but when I hit 'n', it states that it tells me `Pattern not found ` and doesnt highlight any other "older" strings.
+
+![image](/r3images/patternNotFound.png)
+
+
+
+**`-i` command**
+
+You can ignore case sensitivity with the fancy `-i` command! This command is entered while you are within the `less` command!
+
+    -i
+
+    -I
+
+By typing `-i`, we TURN ON case sensitivity (this is on by default)
+
+By typing `-I`, we TURN OFF case sensitivity.
+
+|`-i`|`-I`|
+|------|-----|
+|![image](/r3images/smallIgnore.png) You can see that it case sensitivity is significant|![image](/r3images/bigIgnore.png) Here it ignores case sensitivity!|
+
+Now if I type the following command, the other "older" strings in the paragraphs are highlighted!
+
+    /Older
+
+![image](/r3images/findOlderIgnoreCase.png)
+
+This is really nice when you need to manually go through a file and are searching for a specific string!
+
+
 
 
 -------------
@@ -73,9 +121,27 @@ I won't be showing the queued up commands from now on, but I will show the comma
 
 
 ## **The Mark Feature**
-- you get a goblin named mark!
-- highlight text in less and press m to begin marking!
-- press a letter on the keyboard to assign a letter
+- you get a goblin named mark! (this is not true)
+
+How to begin?
+
+To start, while in your file you opened with less, highlight your text like so:
+
+![image](/r3images/markLinesG.png)
+
+Now, if you press `m` , you will initiate a mark! (see the bottom left of the next image!)
+
+![image](/r3images/askMark.png)
+    
+
+In order to finish marking, you need to press a letter on the keyboard! (a through z)
+
+Here I will assign the highlighted lines the letter 'g'
+
+    g
+
+
+
 - press the single quote," ' ", and then the letter to return to the marked text! (behavior: it saves the screen scroll too. If the text highlighted is the same but the screen scroll is different, going to the two letters will look different)
 
 
