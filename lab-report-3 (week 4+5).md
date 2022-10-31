@@ -24,7 +24,7 @@ What are 3 interesting functions or commands in less?
 |:----------:|:---------|
 |The Search Feature!|<ul><li>When you are in a file with `less` you can use "/" in order to search for strings!<li>some command-line options allow you to refine your searches as long as they are called when `less` is called!<ul><li>eg: `-i`|
 |The Mark Feature! | <ul><li>~~a silly little goblin named mark does your homework!~~<li>highlight text in less and press m to begin marking!<li>press a letter on the keyboard to assign a letter<li>press the single quote," ' ", and then the letter to return to the marked text! |
-|-o[file_name]|takes [file_name] as an input if it came from a pipe|
+|Opening multiple Files with Less! | Navigate though multiple files using keyboard commands!|
 
 
 
@@ -140,39 +140,102 @@ Here I will assign the highlighted lines the letter 'g'
 
     g
 
+Now, in order to return to the marked text press the single quote," ' ", and then the letter to return to the marked text!
 
 
-- press the single quote," ' ", and then the letter to return to the marked text! (behavior: it saves the screen scroll too. If the text highlighted is the same but the screen scroll is different, going to the two letters will look different)
+
+|EXAMPLE:|
+|------|
+|I am going to scroll down to the bottom of the file. ![image](/r3images/endOfFile.png)|
+|![image](/r3images/goToMark.png) <br>After pressing " ' ", the prompt `goto mark:` shows up, |
+|![image](/r3images/wentToMark.png) <br> Then after pressing 'g', it brought me to my marked text!|
+
+INPUTS:
+
+    '
+    g
+
+INTERESTING BEHAVIOR: This seems to not actually save the highlighted text. Rather, it saves the screen scroll instead. If the text highlighted is the same but the screen scroll is different, going to the two letters will look different
+
+Example below: Starting from the top of the file, even though mark a and b have the same text highlighted, going to them doesn't yield the same results!
+
+|`mark a`|`mark b`|
+|------|-----|
+|![image](/r3images/markA.png) |![image](/r3images/markB.png)|
+
 
 
 ----------
 
 
-## **The -o Option**
-
-This option is a way to open a path given to the `less` command via a pipe.   
+## **Opening Multiple Files!**
 
 
+A useful feature of `less` is that you are able to open up multiple files, given multiple file paths!
 
----------
--x ?????
+The pattern for this is as follows:
 
-**-i**
-- ignores cases sensitivity for searches
+    less path1 path2 path3 ...
 
-**-o[file_name]**
-- takes [file_name] as an input if it came from a pipe
-
-**-s**
-- merges consecutive whitespace lines
+You can add as many paths as you want!
 
 
-**-N**
-- shows lines
+***Example:***
+
+Say I want to open the first 4 "rr" files of 9 in the biomed folder shown here:
+
+ ![image](/r3images/rrBiomed.png)
+
+ Using less, I can!
+
+    less rr166.txt rr167.txt rr171.txt rr167.txt rr172.txt
+
+After entering the command above, I see this: 
+
+![image](/r3images/openFourRR.png)
 
 
+You can see at the bottom that I am looking at rr166.txt and that there are 4 total files open! This is really helpful for opening and looking through multiple files!
 
 
+**How to navigae through the files:**
+
+In order to navigate, you first must type a colon, " : ".
+
+Then, to go to the next or previous, hit "n" or "p" respectively.
+
+|`n`|`p`|
+|------|-----|
+|Before Press: <br>![image](/r3images/openFourRR.png)<br>After Press:<br> ![image](/r3images/afterN.png) | Before Press: <br>![image](/r3images/beforeP.png)<br>After Press:<br> ![image](/r3images/afterP.png) |
+
+***Example:***
+
+We can use the star, " * ", in order to "autofill" inputs for less and open up many files. By refining your search with the star, you can cut down on the unnecessary files you open at once.
+
+For this example, I will open every .txt file in /biomed via less!
+
+    less *txt
+
+result:
+
+![image](/r3images/lessAll.png)
+
+>you can see that there are 837 files open!
+
+The star is a super powerful tool to open multiple files to pass into less!
+
+
+***Example:***
+
+We will now refine our star autofill into less, and open all of the "rr" files in biomed through less using this next command
+
+    less rr*.txt
+
+![image](/r3images/rr9.png)
+
+> after opening and moving through each file, we can confirm that all 9 files open contain "rr" in them!
+
+So in conjunction with the star, less can be used to manually open multiple specific files based off their file names! Very cool!
 
 _____
 
