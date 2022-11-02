@@ -8,5 +8,5 @@
 ## - [Week 0?](lab-report-1-week-0.html)
 ## - [Week 1](lab-report-1-(week-1).html)
 ## - [Weeks 2 & 3](lab-report-2-(week-2%2B3).html)
-## - [Weeks 4 & 5](/lab-report-3%20(week%204%2B5).html)
+## - [Weeks 4 & 5](/lab-report-3%20(week%204%2B5).md)
 
