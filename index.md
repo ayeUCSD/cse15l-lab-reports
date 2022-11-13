@@ -5,7 +5,9 @@
 # HAHA HELLO WELCOME TO MY LAB REPORTS HAHAHHAHAHAHHAHAHHAHHAHAHHAHHAHAHSHA
 
 
-## - [Week 0?](lab-report-1-week-0.html)
-## - [Week 1](lab-report-1-(week-1).html)
-## - [Weeks 2 & 3](lab-report-2-(weeks2and3).html)
-## - [Weeks 4 & 5](lab-report-3-(weeks4and5).html)
+## - [Lab Report 0: Week 0?](L0.html)
+## - [Lab Report 1: Week 1](L1.html)
+## - [Lab Report 2: Weeks 2 & 3](L2.html)
+## - [Lab Report 3: Weeks 4 & 5](L3.html)
+## - [Lab Report 4: Weeks 6 & 7](L4.html)
+## - [Lab Report 5: Weeks 8 & 9] NOT DONE
